@@ -37,7 +37,7 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
-        [Route("getOther")]
+        [Route("api/[controller]/getOther")]
         public IEnumerable<WeatherForecast> GetOther()
         {
             var rng = new Random();
