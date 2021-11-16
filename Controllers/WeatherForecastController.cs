@@ -50,5 +50,15 @@ namespace WebApplication2.Controllers
             .ToList();
         }
 
+        [HttpPost]
+        [Route("api/[controller]/setParam")]
+        public IActionResult SetParam(string sParam)
+        {
+            string s = Request.QueryString.ToString();
+            _logger.LogInformation("SetParam worker running at: {time}", DateTimeOffset.UtcNow);
+            _logger.LogInformation("SetParam QuersString: {querstring}", s);
+            _logger.LogInformation("SetParam POSTed param: {param}", sParam);
+            return Ok();
+        }
     }
 }
