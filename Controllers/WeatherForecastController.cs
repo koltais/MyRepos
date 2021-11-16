@@ -37,13 +37,13 @@ namespace WebApplication2.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> GetV()
+        public IEnumerable<WeatherForecast> OtherGet()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 3).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
+                TemperatureC = rng.Next(-10, 45),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToList();
