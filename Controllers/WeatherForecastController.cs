@@ -55,9 +55,17 @@ namespace WebApplication2.Controllers
         public IActionResult SetParam(string sParam)
         {
             string s = Request.QueryString.ToString();
+            var hd = Enumerable.ToDictionary(Request.Headers, x => x.Key, x => x.Value);
+
             _logger.LogInformation("SetParam worker running at: {time}", DateTimeOffset.UtcNow);
             _logger.LogInformation("SetParam QuersString: {querstring}", s);
             _logger.LogInformation("SetParam POSTed param: {param}", sParam);
+
+            foreach(var i in hd)
+            {
+                _logger.LogInformation("Header ({key}): {head}", i.Key, i.Value);
+            }
+
             return Ok();
         }
     }
