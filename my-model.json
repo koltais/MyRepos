@@ -1,0 +1,37 @@
+{
+  "myString": "New test",
+  "myInt": 9999999,
+  "myBoolean": true,
+  "myDecimal": 12.3,
+  "myDateTime1": "2021-11-17T14:10:00.6215695Z",
+  "myDateTime2": "2019-09-23T00:00:00",
+  "myStringList": [
+    "apple",
+    "banana",
+    "orange"
+  ],
+  "myDictionary": {
+    "person1": {
+      "id": 201,
+      "name": "C#"
+    },
+    "person2": {
+      "id": 302,
+      "name": "F#"
+    }
+  },
+  "myAnotherModel": {
+    "myString": "Hi there",
+    "myInt": 456,
+    "myBoolean": false,
+    "myDecimal": 0,
+    "myDateTime1": "0001-01-01T00:00:00",
+    "myDateTime2": "0001-01-01T00:00:00",
+    "myStringList": [
+      "coconut",
+      "grain"
+    ],
+    "myDictionary": null,
+    "myAnotherModel": null
+  }
+}
