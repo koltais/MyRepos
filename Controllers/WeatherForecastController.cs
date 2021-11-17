@@ -67,6 +67,7 @@ namespace WebApplication2.Controllers
             }
 
             _logger.LogInformation("Status OK..");
+            _logger.LogInformation("return..");
 
             return Ok();
         }
