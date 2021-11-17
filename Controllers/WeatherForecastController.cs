@@ -27,10 +27,10 @@ namespace WebApplication2.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 3).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
+                TemperatureC = rng.Next(-30, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
@@ -41,10 +41,10 @@ namespace WebApplication2.Controllers
         public IEnumerable<WeatherForecast> GetOther()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 3).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-10, 45),
+                TemperatureC = rng.Next(-20, 45),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToList();
