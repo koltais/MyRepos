@@ -61,7 +61,7 @@ namespace WebApplication2.Controllers
             _logger.LogInformation("SetParam QuersString: {querstring}", s);
             _logger.LogInformation("SetParam POSTed param: {param}", sParam);
 
-            foreach(var i in hd)
+            foreach (var i in hd)
             {
                 _logger.LogInformation("Header ({key}): {head}", i.Key, i.Value);
             }
