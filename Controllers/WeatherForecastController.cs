@@ -57,6 +57,7 @@ namespace WebApplication2.Controllers
             string s = Request.QueryString.ToString();
             var hd = Enumerable.ToDictionary(Request.Headers, x => x.Key, x => x.Value);
 
+            _logger.LogInformation("SetParam worker running at: {time}", DateTimeOffset.UtcNow);
             _logger.LogInformation("SetParam QuersString: {querstring}", s);
             _logger.LogInformation("SetParam POSTed param: {param}", sParam);
 
