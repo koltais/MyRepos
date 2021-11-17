@@ -66,6 +66,8 @@ namespace WebApplication2.Controllers
                 _logger.LogInformation("Header ({key}): {head}", i.Key, i.Value);
             }
 
+            _logger.LogInformation("Status OK..");
+
             return Ok();
         }
     }
